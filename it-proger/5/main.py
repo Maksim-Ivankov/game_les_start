@@ -2,12 +2,12 @@
 
 import pygame
 
-# sprytesheet - карточка игрока
+
 
 clock = pygame.time.Clock()
 
 pygame.init()
-screen = pygame.display.set_mode((618,359)) # размер окна
+screen = pygame.display.set_mode((618,359)) 
 
 player_speed = 5 # скорость игрока
 player_x = 150 # положение игрока
@@ -17,7 +17,7 @@ is_jump = False
 jump_count = 7 # высота прыжка
 
 bg = pygame.image.load('images/bg.png')
-walk_left = [ # для анимации
+walk_left = [ 
     pygame.image.load('images/player_left/1.png'),
     pygame.image.load('images/player_left/2.png'),
     pygame.image.load('images/player_left/3.png'),
@@ -37,9 +37,7 @@ bg_x = 0 # для переменщения фона
 
 running = True
 while running:
-    # bg_x-=10 # смещаем фон
     screen.blit(bg, (bg_x,0))
-    # screen.blit(bg, (bg_x+618,0)) # второй задний фон за первым
     
     if player_anim_count==4: player_anim_count=0
     if bg_x==-620: bg_x=0 # если смещение вышло за предлы второго фона, обнуляем его
@@ -74,7 +72,7 @@ while running:
     
     pygame.display.update()
     for event in pygame.event.get():
-        if event.type == pygame.QUIT: # если нажали на крест
-            pygame.quit() # закрываем окно
-            running = False # схлопываем бесконечный цикл
+        if event.type == pygame.QUIT: 
+            pygame.quit() 
+            running = False 
     clock.tick(10)

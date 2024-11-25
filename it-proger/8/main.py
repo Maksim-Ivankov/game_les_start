@@ -1,4 +1,4 @@
-# 
+# спамим призраков и делаем таймер
 
 import pygame
 
@@ -20,7 +20,11 @@ ghost = pygame.image.load('images/prizrak.png').convert_alpha()
 ghost_x = 620
 
 
+ghost_list_in_game = [] # здесь храним монстров
 
+# добавляем таймер
+ghost_timer = pygame.USEREVENT + 1
+pygame.time.set_timer(ghost_timer,1000)
 
 walk_left = [ 
     pygame.image.load('images/player_left/1.png').convert_alpha(),
@@ -42,16 +46,21 @@ running = True
 while running:
 
     screen.blit(bg, (bg_x,0))
-    screen.blit(ghost, (ghost_x,250))
-    ghost_x-=10
-    if ghost_x<0: ghost_x=620
+    # screen.blit(ghost, (ghost_x,250))
+    # ghost_x-=10
+    # if ghost_x<0: ghost_x=620
     
     
     player_rect = walk_left[0].get_rect(topleft=(player_x,player_y))
-    ghost_rect = ghost.get_rect(topleft=(ghost_x,250))
+    # ghost_rect = ghost.get_rect(topleft=(ghost_x,250))
     
-    if player_rect.colliderect(ghost_rect): 
-        print('Касаются')
+    if ghost_list_in_game: # если в этой штуке есть какие либо элементы
+        for el in ghost_list_in_game:
+            screen.blit(ghost, el)
+            el.x-=10
+    
+            if player_rect.colliderect(el): 
+                print('Ты проиграл')
     
     
     if player_anim_count==4: player_anim_count=0
@@ -90,4 +99,9 @@ while running:
         if event.type == pygame.QUIT: 
             pygame.quit()
             running = False 
+        if event.type == ghost_timer:   # если таймер сработал
+            ghost_list_in_game.append(ghost.get_rect(topleft=(620,250)))
+            
+            
+            
     clock.tick(10)
