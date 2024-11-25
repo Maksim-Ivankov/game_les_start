@@ -8,18 +8,18 @@ pygame.init()
 screen = pygame.display.set_mode((618,359)) 
 
 
-bg = pygame.image.load('images/bg.png')
+bg = pygame.image.load('it-proger/images/bg.png')
 walk_left = [ 
-    pygame.image.load('images/player_left/1.png'),
-    pygame.image.load('images/player_left/2.png'),
-    pygame.image.load('images/player_left/3.png'),
-    pygame.image.load('images/player_left/4.png'),
+    pygame.image.load('it-proger/images/player_left/1.png'),
+    pygame.image.load('it-proger/images/player_left/2.png'),
+    pygame.image.load('it-proger/images/player_left/3.png'),
+    pygame.image.load('it-proger/images/player_left/4.png'),
 ]
 walk_right = [
-    pygame.image.load('images/player_right/1.png'),
-    pygame.image.load('images/player_right/2.png'),
-    pygame.image.load('images/player_right/3.png'),
-    pygame.image.load('images/player_right/4.png'),
+    pygame.image.load('it-proger/images/player_right/1.png'),
+    pygame.image.load('it-proger/images/player_right/2.png'),
+    pygame.image.load('it-proger/images/player_right/3.png'),
+    pygame.image.load('it-proger/images/player_right/4.png'),
 ]
 
 player_anim_count = 0 # переменная для смены кадров ванимации

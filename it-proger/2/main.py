@@ -10,7 +10,7 @@ running = True
 square = pygame.Surface((50,170)) # создали квадрат
 square.fill('Blue') # раскрасили квадрат
  
-player = pygame.image.load('images/cwsa.jpg') # подгружаем картинку
+player = pygame.image.load('it-proger/images/cwsa.jpg') # подгружаем картинку
 
 while running:
     

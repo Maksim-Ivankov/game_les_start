@@ -15,24 +15,24 @@ player_y = 250
 is_jump = False
 jump_count = 7
 
-bg = pygame.image.load('images/bg.png').convert()
+bg = pygame.image.load('it-proger/images/bg.png').convert()
 
 
-ghost = pygame.image.load('images/prizrak.png').convert_alpha()
+ghost = pygame.image.load('it-proger/images/prizrak.png').convert_alpha()
 ghost_x = 620
 
 
 walk_left = [ 
-    pygame.image.load('images/player_left/1.png').convert_alpha(),
-    pygame.image.load('images/player_left/2.png').convert_alpha(),
-    pygame.image.load('images/player_left/3.png').convert_alpha(),
-    pygame.image.load('images/player_left/4.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/1.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/2.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/3.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/4.png').convert_alpha(),
 ]
 walk_right = [
-    pygame.image.load('images/player_right/1.png').convert_alpha(),
-    pygame.image.load('images/player_right/2.png').convert_alpha(),
-    pygame.image.load('images/player_right/3.png').convert_alpha(),
-    pygame.image.load('images/player_right/4.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/1.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/2.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/3.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/4.png').convert_alpha(),
 ]
 
 player_anim_count = 0 

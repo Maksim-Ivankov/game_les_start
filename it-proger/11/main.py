@@ -16,19 +16,19 @@ jump_count = 7
 
 gameplay = True 
 
-bg = pygame.image.load('images/bg.png').convert()
+bg = pygame.image.load('it-proger/images/bg.png').convert()
 
-ghost = pygame.image.load('images/prizrak.png').convert_alpha()
+ghost = pygame.image.load('it-proger/images/prizrak.png').convert_alpha()
 ghost_x = 620
 
 
-label = pygame.font.Font('fonts/ofont.ru_Roboto.ttf',40)
+label = pygame.font.Font('it-proger/fonts/ofont.ru_Roboto.ttf',40)
 lose_label = label.render('Вы проиграли!', False, (193,196,199))
 restart_label = label.render('Вернуться и отомстить', False, (115,132,148))
 restart_label_rect = restart_label.get_rect(topleft=(110,200))
 
 # делаем снаряд
-bulet = pygame.image.load('images/paintball.png').convert_alpha()
+bulet = pygame.image.load('it-proger/images/paintball.png').convert_alpha()
 bulet = pygame.transform.scale(bulet,(20,20))
 bulets = []
 
@@ -39,16 +39,16 @@ ghost_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(ghost_timer,4000)
 
 walk_left = [ 
-    pygame.image.load('images/player_left/1.png').convert_alpha(),
-    pygame.image.load('images/player_left/2.png').convert_alpha(),
-    pygame.image.load('images/player_left/3.png').convert_alpha(),
-    pygame.image.load('images/player_left/4.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/1.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/2.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/3.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_left/4.png').convert_alpha(),
 ]
 walk_right = [
-    pygame.image.load('images/player_right/1.png').convert_alpha(),
-    pygame.image.load('images/player_right/2.png').convert_alpha(),
-    pygame.image.load('images/player_right/3.png').convert_alpha(),
-    pygame.image.load('images/player_right/4.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/1.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/2.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/3.png').convert_alpha(),
+    pygame.image.load('it-proger/images/player_right/4.png').convert_alpha(),
 ]
 player_anim_count = 0 
 bg_x = 0 
